@@ -1,12 +1,15 @@
+
+This is an expanded version of my initial demo of:
+
 # [Pacman](https://youtu.be/WxeTMsaSOaA)
 - Coding Tutorial: [https://youtu.be/WxeTMsaSOaA](https://youtu.be/WxeTMsaSOaA)
 - Demo: https://imkennyyip.github.io/pacman/
 
-In this tutorial, you will learn how to code pac-man using javascript and HTML5 canvas.
+I have added my own flair with music, sound effects, and changing visuals as well. The game loop is limited with a "Game Over" with an included "Restart" function. The goal of this "remixed" demo is to showcase my ability to program using JavaScript and to overall prove that I can theoretically ship a product.
 
-Throughout the tutorial, you will learn how to draw on the HTML5 canvas,  create the game loop,  load the game map using a tilemap, add click handlers to make the pacman move, create a simple algorithm to move each ghost at random, detect collisions between the pacman and ghosts, have pacman eat the food pellets, add a running score, reset the game when pacman collides with a ghost, and move onto the next level once pacman eats all the food pellets in the current stage. 
+Credits: 
+"eatSound" orginally named "blip 2.aif" by tim.kahn -- https://freesound.org/s/15405/ -- License: Attribution 4.0
 
-![pacman-ss](https://github.com/user-attachments/assets/2bef5ecf-1254-4a0c-8872-ee6ef1459789)
+"ghostScream" orginally "12130 panic girl scream.wav" by Robinhood76 -- https://freesound.org/s/678502/ -- License: Attribution NonCommercial 4.0
 
-## Homework:
-You can continue working on this project if you like. You can design your own map by modifying the tileMap if you want. You can add power pellets to allow pacman to eat the ghosts. In addition, there is an opening on left and right, where if pacman goes through, it would appear on the other side of the map. Currently pacman just moves off screen out of the map so a fix would be needed to make pacman appear the other side. For more of a challenge, you can modify the ghosts movement to cover areas unreachable since the ghosts only change directions when they collide against a wall, and not when theres another path available to go through.
+Any other sounds included in this demo are produced by myself. 

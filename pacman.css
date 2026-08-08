@@ -1,7 +1,242 @@
-body {
-    text-align: center;
+@font-face {
+    font-family: gameFont;
+    src: url("game-font.otf");
 }
 
-#board {
-    background-color: black;
+@media (min-width: 35vh) and (min-height: 83vh) {
+ #gameContainer #board {
+  background-color: black;
+  background-size: cover;
+  width: 100%;
+  height: 100%;;
+    max-width: 199vh;
+    overflow: hidden;
+    overscroll-behavior: none;
+    margin: auto;
+    position: absolute;
+    flex-direction: column;
+      justify-content: center;
+      align-items: center;
+     
+ }
+
+
+
+.overlay {
+  font: inherit ;
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  color: rgb(141, 234, 239);
+  display: block;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; 
+  text-align: center;
+  /* padding: 0 10px; */
+  
 }
+
+
+.overlay h1 {
+  font-family: gameFont;
+  color: #d0f114;; 
+  font-size: 6rem;
+  position: relative;
+  left: 0; 
+  right: 0; 
+  display: block;
+  margin: auto;
+  margin-bottom: 0.5em;
+  width: 100%; 
+  height: auto;
+  
+}
+
+.stamp-container h2 {
+  bottom: auto;
+  top: 0.5em;
+  position:relative;
+  background-color:transparent;
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  animation-delay:1.0s;
+  -webkit-animation-delay:1.0s;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  opacity: 0;
+  -webkit-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+  transform: rotate(12deg);
+  color: #10c0df;
+  font-size: 9vh;
+  font-stretch: 100%; 
+  font-weight: 700;
+  border: 0.5rem solid #10c0df;
+  display: block;
+  padding: auto;
+  margin: auto;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  font-family: 'Courier';
+  mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png');
+  syntax: auto 100%;
+  mix-blend-mode: multiply;
+  width: 100%;
+  height: auto;
+  z-index: 5; 
+  
+} 
+
+
+
+
+.overlay p {
+  font-family: gameFont;
+  color: rgb(243, 10, 235); 
+  font-weight: 700;
+  animation: blinker 3s linear infinite;  
+  font-size: 3vh;
+  display: block;
+  margin: auto;
+  margin-top: 4em;
+  margin-bottom: 4em;
+  width: 100%;
+  height: auto;
+  z-index: 10; 
+  
+}
+
+#startGameButton{
+  font-family: gameFont;
+  color: rgb(21, 237, 154);
+  display: block;
+  margin: auto;
+  padding: 0.5em 0.5em;
+  font-size: 2em;
+  cursor: pointer;
+  border-radius: 12px;  
+  background-color: aliceblue;
+  border-color: rgba(94, 183, 242, 0.702);
+}
+
+
+
+  #gameOverScreen {
+  width: 100%;
+  height: 100%;;
+    max-width: 199vh;
+    overflow: hidden;
+    overscroll-behavior: none;
+    margin: auto;
+    position: absolute;
+    flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+
+  }
+
+  h3 {
+    font-family: gameFont;  
+    color:rgb(255, 0, 0);
+     font-size: 7em;
+    position:relative;
+    text-align: center;
+    display: block;
+    margin: auto;
+    height: auto;
+    margin-top: 1em;
+  }
+  
+  #restartButton {
+    font-family: gameFont; 
+    animation: blinker 1s linear infinite;
+    color: rgb(250, 8, 218);
+    background-color: rgb(235, 212, 7);
+    border-radius: .5em;
+    border-color: rgb(255, 0, 153);
+    border-style: double;
+    transform: translateX(-50%);
+     display: block;
+  padding: 0.5em 0.5em;
+  font-size: 1.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 4em;
+  }
+}
+
+  #winScreen {
+  width: 100%;
+  height: 100%;;
+    max-width: 199vh;
+    overflow: hidden;
+    overscroll-behavior: none;
+    margin: auto;
+    position: absolute;
+    flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+
+  }
+
+   h4 {
+    font-family: gameFont;  
+    color:rgb(255, 208, 0);
+     font-size: 7em;
+    position:relative;
+    text-align: center;
+    display: block;
+    margin: auto;
+    height: auto;
+    margin-top: 1em;
+  }
+
+
+  @keyframes pulse{
+  0%{
+    opacity: 0;
+  }
+  10%{
+    opacity:.50;
+    transform-origin: 50% 50%;
+    transform: rotate(-2deg) scale(5);
+    transition: all .3s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  }
+  100%{
+    opacity:1;
+    transform: rotate(-15deg) scale(1);
+  }
+}
+  
+  @keyframes blinker {
+   0% {
+     opacity: 1; /* Text is fully visible at the start and end */
+   }
+   50% {
+     opacity: 0; /* Text is fully transparent halfway through */
+   }
+   100% {
+     opacity: 1;
+   }
+  }
+
+ 
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

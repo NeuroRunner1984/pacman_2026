@@ -3,12 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pac-Man</title>
+    <title>Pac-Man REMIXED!</title>
     <link rel="stylesheet" href="pacman.css">
-    <script src="pacman.js"></script>
+    <!-- <script src="pacman2.js"></script> -->
+    <link rel="icon" type="image/png" href="scaredGhost.png">
 </head>
+
 <body>
-    <canvas id="board"></canvas>
-    
-</body>
+   <section id="gameContainer">
+            <!-- Start Game Screen -->
+              <canvas id="board" > </canvas>
+                    <div id="startOverlay" class="overlay" > 
+             <h1>PAC MAN</h1>
+             <div class="stamp-container">
+            <h2>REMIXED!</h2>
+            <p>Click the start game button to play</p>
+            <button id="startGameButton">Start Game</button>
+        </section>
+        <!-- Game Over Screen -->
+   <section id="gameOverScreen" style="display: none;">
+       <h3>GAME OVER</h3>
+       <button id="restartButton">Play Again?</button>
+   </section>  
+       <section id="winScreen" style="display: none;">
+           <h4> YOU WIN!</h4>
+          <button id="restartButton">Play Again?</button>
+       </section>
+    </body>
+    <script type="module" src="pacman2.js"></script> 
 </html>
